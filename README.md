@@ -11,4 +11,12 @@ Then run the opto-mizer by doing...
 
 Any image that is writable which is added to that folder should then be opto-mized automatically.
 
-LET ME KNOW HOW IT WORX
+LET ME KNOW HOW IT WORX.
+
+License
+
+This shit is open as - do whatever you want.
+
+It also uses the Chokidar library from here: https://github.com/paulmillr/chokidar
+
+Please respect this dudes MIT license. Or something.
