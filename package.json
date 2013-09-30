@@ -13,7 +13,7 @@
 		"url": "http://twitter.com/electric"
 	},
 	"main": "src/optomize.js",
-  "bin": "./src/optomize.js",
+  "bin": "./bin/optomize",
 	"licenses": [{
 		"type": "MIT",
 		"url": "https://raw.github.com/electric/optomize/master/LICENSE"

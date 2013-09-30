@@ -1,30 +1,34 @@
-var cli = exports;
-
-var path = process.argv[2];
-var chokidar = require( 'chokidar' );
-var watcher = chokidar.watch( path, {
-	ignoreInitial: true,
-	persistent: true
-} );
-
-watcher
-	.on( 'add', function( path, stats ){
-		if( Optomize.isSquashable( path, stats ) ){
-			console.log( 'File', path, 'has been added. Attempting squash...' );
-			Optomize.squash( path, stats );
-		}
-	} )
-	.on( 'change', function( path, stats ){
-		console.log( 'File', path, 'changed size to', stats.size );
-	} )
-	.on( 'unlink', function( path ){ console.log( 'File', path, 'has been removed' ); } )
-	.on( 'error', function( error ){ console.error( 'Error happened', error ); } )
-
-// Only needed if watching is persistent.
-watcher.close();
-
-Optomize = function(){
+var App = function(){
 	return {
+		watch : function( path ){
+			var chokidar = require( 'chokidar' );
+			var watcher = chokidar.watch( path, {
+				ignoreInitial: true,
+				persistent: true
+			} );
+
+			watcher
+			.on( 'add', function( path, stats ){
+				if( Optomize.isSquashable( path, stats ) ){
+					console.log( 'File', path, 'has been added. Attempting squash...' );
+					Optomize.squash( path, stats );
+				}
+			} )
+			.on( 'change', function( path, stats ){
+				console.log( 'File', path, 'changed size to', stats.size );
+			} )
+			.on( 'unlink', function( path ){ console.log( 'File', path, 'has been removed' ); } )
+			.on( 'error', function( error ){ console.error( 'Error happened', error ); } )
+
+			// Only needed if watching is persistent.
+			watcher.close();
+		}		
+	}
+}();
+
+var Optomize = function(){
+	return {
+
 		isSquashable : function( path, stats ){
 			var perms = this.decodePerms( stats );
 			var writable = ( parseInt( perms ) & 2 ) ? true : false;
@@ -46,10 +50,10 @@ Optomize = function(){
 					console.log( 'stdout:', stdout );
 
 					if( stderr !== null && stderr != '' )
-						console.log( 'stderr:', stderr );
+					console.log( 'stderr:', stderr );
 
 					if( error !== null )
-						console.log('exec error:', error );
+					console.log('exec error:', error );
 
 				});
 			} else {
@@ -65,3 +69,16 @@ Optomize = function(){
 
 	}
 }();
+
+switch( process.argv[2] ){
+case "watch":
+	if( !process.argv[3] )
+		console.log( "You must specify a path" );
+	else
+		App.watch( process.argv[3] );
+
+	break;
+default:
+	console.log( "Specify an action" );
+	break;
+}
