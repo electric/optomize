@@ -45,7 +45,7 @@ var Optomize = function(){
 
 			console.log( path );
 			if( path && this.isSquashable( path, stats ) ){
-				var command = 'echo "' + path + '" | imageOptim -a -q';
+				var command = 'echo "' + path + '" | imageOptim -q';
 				child = exec( command, function( error, stdout, stderr ){
 					console.log( 'stdout:', stdout );
 
