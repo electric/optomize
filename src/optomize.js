@@ -2,6 +2,8 @@ var App = function(){
 	return {
 		watch : function( path ){
 			var chokidar = require( 'chokidar' );
+			if( path == '.' ) path = process.cwd();
+
 			var watcher = chokidar.watch( path, {
 				ignoreInitial: true,
 				persistent: true
