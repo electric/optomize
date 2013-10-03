@@ -1,29 +1,29 @@
 {
-	"name": "optomize",
-	"description": "",
-	"version": "0.0.1",
-	"homepage": "https://github.com/electric/optomize",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/electric/optomize.git"
-	},
-	"author": {
-		"name": "Eru Goodwin",
-		"email": "eru.goodwin@gmail.com",
-		"url": "http://twitter.com/electric"
-	},
-	"main": "src/optomize.js",
+  "name": "optomize",
+  "description": "",
+  "version": "0.0.1",
+  "homepage": "https://github.com/electric/optomize",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/electric/optomize.git"
+  },
+  "author": {
+    "name": "Eru Goodwin",
+    "email": "eru.goodwin@gmail.com",
+    "url": "http://twitter.com/electric"
+  },
+  "main": "src/optomize.js",
   "bin": "./bin/optomize",
-	"licenses": [{
-		"type": "MIT",
-		"url": "https://raw.github.com/electric/optomize/master/LICENSE"
-	}],
-	"dependencies": {
-		"chokidar": "~0.6.3",
-		"imageoptim-cli": "~1.6.19"
-	},
-	"contributors": [
-		"Eru Goodwin (https://github.com/electric)",
-		"Pete G (https://github.com/burgerito)"
-	]
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://raw.github.com/electric/optomize/master/LICENSE"
+  }],
+  "dependencies": {
+    "chokidar": "~0.6.3",
+    "imageoptim-cli": "~1.6.19"
+  },
+  "contributors": [
+    "Eru Goodwin (https://github.com/electric)",
+    "Pete G (https://github.com/burgerito)"
+  ]
 }

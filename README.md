@@ -23,3 +23,10 @@ Once installed, you can watch a folder by doing:
 `optomize watch /path/to/images/folder`
 
 Any image that is writable which is added to that folder should then be opto-mized automatically.
+
+
+## License
+
+This code is distributed with the MIT license. Pretty sure that means you can do whatever you want.
+
+Read more here: https://raw.github.com/electric/optomize/master/LICENSE
