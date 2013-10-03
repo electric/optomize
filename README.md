@@ -2,6 +2,8 @@
 
 This is pretty barebones and pretty simplistic at this stage. It also has a bunch of dependencies.
 
+![THATS OPTOMIZED](https://lh5.ggpht.com/a2kwBsCRUjTZ-IDcMzvbBJ1bOpkZy3gTFsED3Zn3xPnbjNm5wrXT2rwxFpL26U86Sgyl=s600)
+
 ## Dependencies
 
 - Mac OS
