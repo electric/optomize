@@ -19,8 +19,7 @@
     "url": "https://raw.github.com/electric/optomize/master/LICENSE"
   }],
   "dependencies": {
-    "chokidar": "~0.8",
-    "imageoptim-cli": "~1.6.19"
+    "chokidar": "~0.8"
   },
   "contributors": [
     "Eru Goodwin (https://github.com/electric)",
