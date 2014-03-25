@@ -1,7 +1,7 @@
 {
   "name": "optomize",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/electric/optomize",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
     "url": "https://raw.github.com/electric/optomize/master/LICENSE"
   }],
   "dependencies": {
-    "chokidar": "~0.6.3",
+    "chokidar": "~0.8",
     "imageoptim-cli": "~1.6.19"
   },
   "contributors": [

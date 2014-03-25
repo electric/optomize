@@ -41,13 +41,14 @@ var Optomize = function(){
 			return false;
 		},
 
-		squash : function( path, stats ){
+		squash : function( path, stats, is_dir ){
 			var child;
 			var exec = require('child_process').exec;
 
 			console.log( path );
 			if( path && this.isSquashable( path, stats ) ){
-				var command = 'echo "' + path + '" | imageOptim -q';
+				var command = 'image_optim "' + path + '"';
+
 				child = exec( command, function( error, stdout, stderr ){
 					console.log( 'stdout:', stdout );
 
